@@ -1,8 +1,6 @@
 # ACEest Fitness & Gym
 
-A Flask fitness-management app adapted from selected features in the supplied
-ACEest versions 2.2.4 and 3.2.4. The original Tkinter screens were replaced
-with Flask routes.
+A Flask fitness-management app adapted from selected features in the supplied ACEest versions 2.2.4 and 3.2.4. The original Tkinter screens were replaced with Flask routes.
 
 ## Features
 
@@ -29,35 +27,40 @@ Start the application:
 python app.py
 ```
 
-Open <http://localhost:5000/> or check <http://localhost:5000/health>.
+Open [http://localhost:5000/](http://localhost:5000/) or check the health endpoint at [http://localhost:5000/health](http://localhost:5000/health).
 
 ## Run tests
+
+Run the test suite with:
 
 ```bash
 python -m pytest -q
 ```
 
-The current test suite has 8 tests.
+The test suite contains 8 tests.
 
 ## Docker
 
-Build and run the app:
+Build the image:
 
 ```bash
 docker build -t aceest-fitness:1.0 .
+```
+
+Run the container:
+
+```bash
 docker run --rm -p 5000:5000 aceest-fitness:1.0
 ```
 
-The image was also pushed to Docker Hub as `hemantsudan/aceest-fitness:1.0`.
+The image is also available on Docker Hub as [`hemantsudan/aceest-fitness:1.0`](https://hub.docker.com/r/hemantsudan/aceest-fitness).
 
-## Jenkins
+## Jenkins and SonarQube
 
-The Jenkins pipeline checks out the `main` branch, installs the Python
-requirements, runs pytest, and submits a SonarQube analysis. The latest
-recorded build succeeded, with all 8 tests passing. SonarQube reported a
-passed quality gate and 2 critical code smells.
+The Jenkins pipeline checks out the `main` branch, installs the Python requirements, runs pytest, and submits a SonarQube analysis. The latest recorded build succeeded, with all 8 tests passing.
 
-## Kubernetes
+SonarQube reported a passed quality gate and 2 critical code smells.
 
-Kubernetes deployment and the deployment strategy demonstrations have not
-been completed yet.
+## Evidence screenshots
+
+Assignment 2 screenshots are available in the [`screenshots`](./screenshots) folder.
