@@ -32,7 +32,10 @@ pipeline {
             steps {
                 script {
                     def scannerHome = tool 'SonarScanner'
-                    withSonarQubeEnv('SonarQube') {
+                    withSonarQubeEnv(
+			installationName: 'SonarQube',
+			credentialsId: 'sonar-analysis-token'
+		    ) {
                         sh """
                             ${scannerHome}/bin/sonar-scanner \
                             -Dsonar.projectKey=aceest-fitness-assignment-2 \
