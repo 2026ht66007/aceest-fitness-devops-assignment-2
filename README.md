@@ -64,3 +64,15 @@ SonarQube reported a passed quality gate and 2 critical code smells.
 ## Evidence screenshots
 
 Assignment 2 screenshots are available in the [`screenshots`](./screenshots) folder.
+
+## Additional lab practice: Jenkins, Maven and SonarQube
+
+In a separate lab exercise, I practiced configuring a Jenkins Maven job and integrating it with SonarQube.
+
+- Configured Jenkins build steps for a Maven project.
+- Set up the SonarQube Scanner and Quality Gates integration in Jenkins.
+- Configured a SonarQube project key and ran code analysis.
+- Reviewed the analysis results, code smells and quality gate status.
+- Corrected a Jenkins shell command and recorded a successful build.
+
+This lab used the `sonar-maven-demo` project and is separate from the ACEest Fitness application.
